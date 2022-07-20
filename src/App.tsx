@@ -5,6 +5,7 @@ import {
     GridValueGetterParams,
     GridRenderCellParams,
     GridActionsCellItem,
+    zhCN,
 } from "@mui/x-data-grid";
 import Button from "@mui/material/Button";
 
@@ -569,6 +570,7 @@ export default function DataTable() {
     return (
         <div style={{ height: 500, width: "100%" }}>
             <DataGrid
+                localeText={zhCN.components.MuiDataGrid.defaultProps.localeText}
                 getRowId={(row) => row.rowIndex}
                 rows={rows}
                 columns={columns}
